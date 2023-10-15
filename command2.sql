@@ -65,3 +65,31 @@ VALUES
     (1, 1, 1, 2, '2023-10-01'),
     (2, 2, 2, 1, '2023-10-02');
 GO
+
+-- Inserindo mais produtos
+INSERT INTO Produtos (Nome, Preco)
+VALUES ('Produto C', 15.00),
+       ('Produto D', 25.00);
+GO
+
+-- Descobrindo os IDs dos novos produtos
+DECLARE @ProdutoC_ID INT;
+DECLARE @ProdutoD_ID INT;
+SET @ProdutoC_ID = (SELECT ProdutoID FROM Produtos WHERE Nome = 'Produto C');
+SET @ProdutoD_ID = (SELECT ProdutoID FROM Produtos WHERE Nome = 'Produto D');
+
+-- Removendo a restrição de chave estrangeira da coluna CategoriaID na tabela Pedidos
+ALTER TABLE Pedidos DROP CONSTRAINT FK__Pedidos__Categor__5165187F;
+GO
+
+-- Inserindo um pedido sem CategoriaID
+INSERT INTO Pedidos (ClienteID, ProdutoID, Quantidade, DataPedido)
+VALUES (1, 1, 3, '2023-10-05');
+GO
+
+-- Inserindo pedidos sem CategoriaID ou com CategoriaID que não existe
+INSERT INTO Pedidos (ClienteID, ProdutoID, Quantidade, DataPedido, CategoriaID)
+VALUES 
+    (1, @ProdutoC_ID, 3, '2023-10-05', NULL),  -- Pedido sem CategoriaID
+    (2, @ProdutoD_ID, 2, '2023-10-06', 999);   -- Pedido com CategoriaID que não existe
+GO
