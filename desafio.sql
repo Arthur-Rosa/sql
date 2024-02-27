@@ -44,12 +44,3 @@ INSERT INTO Inscricoes (AlunoID, CursoID, DataInscricao) VALUES
 
 -- Exercício 1:
 -- Obter o nome de todos os alunos inscritos no curso de "Matemática".
-
--- Exercício 2:
--- Listar todos os cursos em que o aluno "João Silva" está inscrito.
-
--- Exercício 3:
--- Encontrar o nome e email de todos os alunos inscritos em pelo menos um curso.
-
--- Exercício 4:
--- Listar todos os alunos e os cursos aos quais estão inscritos, incluindo a data de inscrição.
