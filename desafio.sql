@@ -53,3 +53,14 @@ INSERT INTO Inscricoes (AlunoID, CursoID, DataInscricao) VALUES
 
 -- Exercício 4:
 -- Listar todos os alunos e os cursos aos quais estão inscritos, incluindo a data de inscrição.
+
+---======---
+
+-- Exercício 5: 
+-- Contar o Número de Alunos por Curso
+
+-- Exercício 6: 
+-- Listar o Último Curso em que os Alunos se Inscreveram
+
+-- Exercício 7: 
+-- Listar Cursos e Seus Alunos em Ordem Alfabética
