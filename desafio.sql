@@ -42,25 +42,3 @@ INSERT INTO Inscricoes (AlunoID, CursoID, DataInscricao) VALUES
 (4, 4, '2024-02-25'),
 (2, 4, '2024-02-28');
 
--- Exercício 1:
--- Obter o nome de todos os alunos inscritos no curso de "Matemática".
-
--- Exercício 2:
--- Listar todos os cursos em que o aluno "João Silva" está inscrito.
-
--- Exercício 3:
--- Encontrar o nome e email de todos os alunos inscritos em pelo menos um curso.
-
--- Exercício 4:
--- Listar todos os alunos e os cursos aos quais estão inscritos, incluindo a data de inscrição.
-
----======---
-
--- Exercício 5: 
--- Contar o Número de Alunos por Curso
-
--- Exercício 6: 
--- Listar o Último Curso em que os Alunos se Inscreveram
-
--- Exercício 7: 
--- Listar Cursos e Seus Alunos em Ordem Alfabética
